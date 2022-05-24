@@ -69,9 +69,16 @@
  */
 //#define FREQUENCY RF12_433MHZ   // Transmitter frequency. Only one should be uncommented at a time.
 //#define FREQUENCY RF12_915MHZ 
+
 #define FREQUENCY RF12_868MHZ 
 const int NETWORK_GROUP = 210;  // Default 210
-const int NODE_ID       = 24;   // Dafault 19
+/*
+ * 19 : living room
+ * 20 : outside
+ * 21 : Ruaridh bed
+ * 22 : Master bed
+ */
+const int NODE_ID       = 19;   // Dafault 19
 
 
 // Monitoring configuration
@@ -120,7 +127,7 @@ const int TEMPERATURE_PRECISION = 12;  // Default 12  - Onewire temperature sens
 
 
 // Global variables
-boolean debug = 1; // variable to store is debug is avalable or not. 
+boolean debug = 0; // variable to store is debug is avalable or not. 
 int numberOfDevices; // Number of temperature devices found
 DeviceAddress tempDeviceAddress; // We'll use this variable to store a found onewire device address
 int PayloadLength = 6; // initial, non variable length in bytes. 2 bytes per int / variable in array. 
